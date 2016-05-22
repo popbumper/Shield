@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html ng-app="clubCare">
+    <head>
+ <script type="text/javascript" src='js/rhaboo.min.js'></script>
+    <script>
+    var store = Rhaboo.persistent('config');
+
+	if(store.introSkip == 'yes2'){
+	}
+	else
+	{
+	 //They will  see the intro so lets set the flag now
+	 store.write('introSkip', 'yes3');
+	 window.location.href = 'intro.html'
+	};
+
+    </script>
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta id="viewport" name="viewport" content="" />
+
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/yarp.css" />
+		<link rel="stylesheet" href="css/font-awesome.css">
+        <title>Club Care Insurance</title>
+
+		<script type="text/javascript" charset="utf-8"></script>
+   </head>
+  <script type="text/javascript" src="js/libs/GALocalStorage.js"></script>
+	<script>
+	  ga_storage._setAccount('UA-71012021-2'); //Replace with your own
+	  ga_storage._trackPageview('/index.html');
+	</script>
+    <body>
+
+<header>
+	<img class="homelogo_test" src="img/shield-logo.png" />
+	<div class="pageTitle" ><img src="img/defaqto.png" width="68px"/></div>
+    <div style="clear: both;"></div>
+</header>
+
+
+        <div class="container-fluid" ng-view >
+
+        </div>
+
+
+
+<style>
+a {
+text-decoration: none;
+color:#FFF;
+
+}
+
+a:link {
+text-decoration: none;
+color:#FFF;
+
+}
+
+a:hover {
+color:#FFF;
+}
+
+a:active {
+color:#FFF;
+text-decoration: none;
+
+}
+</style>
+
+<footer>
+	<ul id="menu">
+		<li id="home-tab-button" class="tab-button" style="font-size:8px" ><a href="#/home" ><i class="fa fa-home"  style="font-size:32px"></i><br>Home</a></li>
+		<li id="buy-tab-button" class="tab-button" style="font-size:8px"><a href="#/claim" ><i class="fa fa-warning"  style="font-size:32px"></i><br>Claims</a></li>
+		<li id="buy-tab-button" class="tab-button" style="font-size:8px"><a href="#/contact" ><i class="fa fa-phone"  style="font-size:32px"></i><br>Contact</a></li>
+		<li id="featured-tab-button" class="tab-button" style="font-size:8px"><a href="#/about" ><i class="fa fa-info-circle"  style="font-size:32px"></i><br>About</a></li>
+		<li id="about-tab-button" class="tab-button" style="font-size:8px"><a href="#/more" ><i class="fa fa-ellipsis-h"  style="font-size:32px"></i><br>More</a></li>
+	</ul>
+</footer>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+
+<script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/libs/angular.min.js"></script>
+<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+<script type="text/javascript" src="js/libs/ui-bootstrap-tpls-0.11.0.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/PushwooshAndroid.js"></script>
+<script type="text/javascript" src="js/PushwooshiOS.js"></script>
+<script type="text/javascript" src="js/angular/routes.js"></script>
+<script type="text/javascript" src="js/angular/controller.js"></script>
+
+
+<script>
+
+
+
+function create_iframe(url){
+
+    var wrapper = jQuery('#url-wrapper');
+
+    if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)){
+        wrapper.addClass('ios');
+        var scrolling = 'no';
+    }else{
+        var scrolling = 'yes';
+    }
+
+    jQuery('<iframe>', {
+        src: url,
+        id:  'url',
+        frameborder: 0,
+        scrolling: scrolling
+    }).appendTo(wrapper);
+
+}
+
+</script>
+
+        <script type="text/javascript">
+            app.initialize();
+            var viewportScale = 1.0 / window.devicePixelRatio;
+			$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=1, maximum-scale=1.0, width=device-width, height=device-height");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<script>
+  ga_storage._setAccount('UA-71012021-2'); //Replace with your own
+  ga_storage._trackPageview('/main.html');
+</script>
+
+<div class="homeContent">
+<div class="pageBlock" style="background-color:transparent;">
+<table style="width: 100%;" cellspacing="5">
+<tbody>
+<tr>
+<td style="height: 45px; width: 48%; border-radius: 4px; background-color: #4cb020;"><a href="#/policy" style="text-decoration: none; font-size:20px; padding-left:12%; font-weight: bold; color: #ffffff;"><span style="color: #ffffff;">&nbsp;</span>My unit<i class="fa fa-chevron-right fa-lg" style="font-size:28px; float:right; margin-right:14px;"></i></a></td>
+<td style="height: 45px; width: 4%;">&nbsp;</td>
+<td style="height: 45px; width: 48%; border-radius: 4px; background-color: #4cb020;"><a style="text-decoration: none; font-size:20px; padding-left:12%; font-weight: bold; color: #ffffff;" href="#/claim"><span style="color: #ffffff;">&nbsp;</span>Products<i class="fa fa-chevron-right fa-lg" style="font-size:28px;  float:right; margin-right:14px;"></i></a></td>
+</tr>
+<tr>
+<td colspan="3">&nbsp; &nbsp;</td>
+</tr>
+<tr>
+<td style="height: 25px; width: 45%; border-radius: 4px; background-color: #4cb020;;"><a style="text-decoration: none; font-size:20px; padding-left:12%; font-weight: bold; color: #ffffff;" href="#/" onclick="window.open('http://www.clubcareinsurance.com/find-a-caravan-repairer','_system');"><span style="color: #ffffff;">&nbsp;</span>Claims<i class="fa fa-chevron-right fa-lg" style="font-size:28px;  float:right; margin-right:14px;"></i></a></span></td>
+<td style="height: 25px; width: 4%;">&nbsp;</td>
+<td style="height: 25px; width: 45%; border-radius: 4px; background-color: #4cb020;;"><a style="text-decoration: none; font-size:16px; padding-left:3%; font-weight: bold; color: #ffffff;" href="#/products"><span style="color: #ffffff;">&nbsp;</span>Caravan Selector<i class="fa fa-chevron-right fa-lg" style="font-size:28px; float:right; margin-right:5px;"></i></a></td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td colspan="3">&nbsp; &nbsp;</td>
+</tr>
+<tr>
+<td style="height: 45px; width: 48%; border-radius: 4px; background-color: #4cb020;;"><a style="text-decoration: none; font-size:20px; padding-left:9%;  font-weight: bold; color: #ffffff;" href="#/hints"><span style="color: #ffffff;">&nbsp;</span>Share<i class="fa fa-chevron-right fa-lg" style="font-size:28px;  float:right; margin-right:14px;"></i></a></td>
+<td width="4%" style="height: 45px;">&nbsp;</td>
+<td style="height: 45px; width: 48%; border-radius: 4px; background-color: #4cb020;;"><a style="text-decoration: none; font-size:18px; padding-left:3%; font-weight: bold; color: #ffffff;" href="#/share"><span style="color: #ffffff;">&nbsp;</span>Information<i class="fa fa-chevron-right fa-lg" style="font-size:28px;  float:right; margin-right:5px;"></i></a></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+
+
+<img class="homelogo_peek" src="img/Armadillo.png">
+</div>
+

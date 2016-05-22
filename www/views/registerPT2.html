@@ -1,0 +1,89 @@
+<script>
+var store = Rhaboo.persistent('policy');
+function savePolicyDetails(){
+
+	var unitType = document.getElementById("unitType").value;
+	var insurer = document.getElementById("insurer").value;
+	var policyNumber = document.getElementById("policyNumber").value;
+	var renewalDate = document.getElementById("renewalDate").value;
+
+	store.write('unitType', unitType);
+	store.write('insurer', insurer);
+	store.write('policyNumber', policyNumber);
+	store.write('renewalDate', renewalDate);
+
+	window.location = '#/registerPT3';
+
+}
+
+
+
+
+		document.getElementById("insurer").value = store.insurer;
+
+
+
+	document.getElementById("unitType").value = store.unitType
+
+if(store.policyNumber != undefined){
+	document.getElementById("policyNumber").value = store.policyNumber
+}
+	document.getElementById("renewalDate").value = store.renewalDate
+
+</script>
+
+
+
+
+<div class="homeContent">
+<div class="pageBanner">Step 2: My Policy Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="step2">
+
+	<p>Unit Type
+	<select name="unitType" id="unitType" class="feedback-input">
+		<option value="-1">Select Unit Type</option>
+		<option id="Touring Caravan" value="Touring Caravan">Touring Caravan</option>
+		<option id="Trailer Tent" value="Trailer Tent">Trailer Tent</option>
+		<option id="Folding Caravan" value="Folding Caravan">Folding Caravan</option>
+		<option id="Trailer" value="Trailer">Trailer</option>
+		<option id="Static Caravan" value="Static Caravan">Static Caravan</option>
+		<option id="Park Home" value="Park Home">Park Home</option>
+		<option id="Log Cabin" value="Log Cabin">Log Cabin</option>
+		<option id="Lodge" value="Lodge">Lodge</option>
+		<option id="Twin Lodge" value="Twin Lodge">Twin Lodge</option>
+		<option id="Chalet" value="Chalet">Chalet</option>
+		<option id="Tent" value="Tent">Tent</option>
+	</select>
+	</p>
+
+	<p>Current Insurer
+	<select name="insurer" id="insurer" class="feedback-input">
+		<option value="-1">Select Insurer</option>
+		<option id="Ageas" value="Ageas">Ageas</option>
+		<option id="Amtrust" value="Amtrust">Amtrust</option>
+		<option id="Not" value="Not">Not insured with Shield</option>
+		<option id="Unsure" value="Unsure">Unsure</option>
+	</select>
+	</p>
+
+	<p>
+	Policy Number (if known)
+	 <input name="policyNumber" type="text" class="feedback-input" placeholder="Policy Number" id="policyNumber" />
+	</p>
+
+	<p>
+	 Renewal Date<input name="renewalDate" type="date" class="feedback-input"  id="renewalDate" placeholder="Rewnewal Date" />
+	</p>
+
+    <button class="btn btn-success active" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>
+
+  </div>
+</form>
+
+<div style="clear: both; min-height:80px;"></div>
+</div>
+
+</div>

@@ -1,0 +1,78 @@
+<script>
+var store = Rhaboo.persistent('policy');
+function savePolicyDetails(){
+
+	var make = document.getElementById("make").value;
+	var model = document.getElementById("model").value;
+	var vin = document.getElementById("vin").value;
+
+	store.write('make', make);
+	store.write('model', model);
+	store.write('vin', vin);
+
+	window.location = '#/registerPT4';
+
+}
+
+if(store.make != undefined){
+	document.getElementById("make").value = store.make
+}
+if(store.model != undefined){
+	document.getElementById("model").value = store.model
+}
+if(store.vin != undefined){
+	document.getElementById("vin").value = store.vin
+}
+
+
+function scanCode(){
+		cordova.plugins.barcodeScanner.scan(
+		  function (result) {
+		  var CRISURL = result.text
+
+
+
+		  CRISURL = CRISURL.replace(/^https?:\/\/www.cris.co.uk\/secure\/qr\//,'')
+
+
+
+ 			document.getElementById("vin").value = CRISURL
+		  },
+		  function (error) {
+			  //alert("Scanning failed: " + error);
+		  }
+	   );
+	}
+
+</script>
+
+
+
+
+<div class="homeContent" >
+<div class="pageBanner">Step 3: My Unit Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock" >
+
+<form id="step3">
+
+	<p>Make
+	 <input name="make" type="text" class="feedback-input" placeholder="Make" id="make" />
+	</p>
+	<p>Model
+	 <input name="model" type="text" class="feedback-input" placeholder="Model" id="model" />
+	</p>
+	<p>Identifier - please add CRiS / VIN Number or Serial Number if applicable
+	 <input name="vin" type="text" class="feedback-input" placeholder="Identifier" id="vin" size="200" /> <button id="scan" class="btn btn-warning" style="width:45%; float:right;" onclick="scanCode();">SCAN VIN CHIP</button><div style="clear: both;"></div>
+	</p>
+
+    <button class="btn btn-success active" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>
+
+  </div>
+
+</form>
+
+<div style="clear: both; min-height:180px;"></div>
+</div>
+
+</div>

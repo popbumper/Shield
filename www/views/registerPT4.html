@@ -1,0 +1,236 @@
+<script>
+var store = Rhaboo.persistent('policy');
+function savePolicyDetails(){
+
+	window.location = '#/Policy';
+
+}
+
+
+var tempimage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAzJJREFUeNrsm9Fx4jAQQAVz/7iDuIM4Fdj88IuvgjMVHHzzEV8FIRXEqQBSwckd+Co40wFUwEkz68mikwccS7JA2pkd8Bhs7fPualeC0el0Ii7LmDguHoAH4AG4Ld+aN+v1msRx3Pd6z0yXTANN4z0w3cE9jn0uNJvNzgEokBcYmE7hYDOmIdOpbSGQGfTcxMYcENx0DnBByrL8Lwf4adAlY/ksJ850Y3yyect0y/TUUU1L1/FtwbYzCGPJPE6ZpnfoACnY9tIWAhxL7kAk8FplLgOwdCgdZDIAiUMAUhmA4I4MLJiOQHNbpsEaBsbpR2iAjYbghXzAVc97YaN/DV0J8sy7Yfpx4XN70BIG/Qh56Ss9RgDX4jIZygMO8LSnVxgvkz9MF+At1RdCYA4zGx3CAypwZ7Fnj1EIJBJPqaDfLwUQTx3b7QiuM0gpXMCAsfH8afwFI5ctM04C5yh8di6cX+loucca4n2BjidQgu4gyV0rIXxnK8Twu+p6RSWAWiihJwrK6qZ8xRBer3Vv0wAy5PaN8ZGC60YSCBkkWWsAUCFxFYqMxxAKdHxUFQqqAORCwtPRTaZNO4vyQW0DgEp4+huNtYVY1u5sAIAH8dgx23eVBO6BQ21wAFTWZpro5KBIOgwNoBSSlW5JJCFoTSFkAkAg6TmsAWBiTSGy2QNuTlQDqA2MubqQE4wDmBgGUNvmAVHLlKhLqG0ekKosTDoWXrENHoAB7DV7ASWfa31ERc+hAkAoPIlcI4ClkHsyGwCIRpeaGqINlL4YRmALAJ6IfqLjFem/ti+6/godP9i2HtB4wYMApVJkfCpJhIFtAAIYWFMX8FWbp57hwKFOyfkK85vKnkNHM0SF4mhFOqzToyfMvyNua72pbrl1bIw0OzkpSlr89TuESArhIevqKBi/l1SbBdGw1KZrZygECDmEwBHVCa+g18ocjNfSaeruBnOo3Z/JhU1Kifxg+ltlwjPpAWJyzEEp+dwDPLSET9ISIjcLQKwXEmKR+AURw62sLUJlADYOAShkAD4M9fM2GP/elgMWUGxUd2h4BVUk/v0CGfk/TvpZwAPwADwAD8Bd+SfAAOeTvpbQVR1SAAAAAElFTkSuQmCC"
+
+
+if(store.photo1SRC != undefined){
+    document.getElementById("image1").src = "data:image/jpeg;base64," + store.photo1SRC;
+}
+else{
+	document.getElementById("image1").src = tempimage;
+}
+
+if(store.photo2SRC != undefined){
+	document.getElementById("image2").src = "data:image/jpeg;base64," + store.photo2SRC;
+}
+else{
+	document.getElementById("image2").src = tempimage;
+}
+
+if(store.photo3SRC != undefined){
+	document.getElementById("image3").src = "data:image/jpeg;base64," + store.photo3SRC;
+}
+else{
+	document.getElementById("image3").src = tempimage;
+}
+
+if(store.photo4SRC != undefined){
+	document.getElementById("image4").src = "data:image/jpeg;base64," + store.photo4SRC;
+}
+else{
+	document.getElementById("image4").src = tempimage;
+}
+
+if(store.photo5SRC != undefined){
+	document.getElementById("image5").src = "data:image/jpeg;base64," + store.photo5SRC;
+}
+else{
+	document.getElementById("image5").src = tempimage;
+}
+
+if(store.photo6SRC != undefined){
+	document.getElementById("image6").src = "data:image/jpeg;base64," + store.photo6SRC;
+}
+else{
+	document.getElementById("image6").src = tempimage;
+}
+
+
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+var capturedPhoto = 0;
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+	pictureSource = navigator.camera.PictureSourceType;
+	destinationType = navigator.camera.DestinationType;
+
+}
+
+function onPhotoDataSuccess1(imageData) {
+	store.write('photo1SRC', imageData);
+	document.getElementById("image1").src = "data:image/jpeg;base64," + imageData;
+}
+
+
+function onPhotoDataSuccess2(imageData) {
+	store.write('photo2SRC', imageData);
+	document.getElementById("image2").src = "data:image/jpeg;base64," + imageData;
+}
+
+function onPhotoDataSuccess3(imageData) {
+	store.write('photo3SRC', imageData);
+	document.getElementById("image3").src = "data:image/jpeg;base64," + imageData;
+}
+
+function onPhotoDataSuccess4(imageData) {
+	store.write('photo4SRC', imageData);
+	document.getElementById("image4").src = "data:image/jpeg;base64," + imageData;
+}
+
+function onPhotoDataSuccess5(imageData) {
+	store.write('photo5SRC', imageData);
+	document.getElementById("image5").src = "data:image/jpeg;base64," + imageData;
+}
+
+function onPhotoDataSuccess6(imageData) {
+	store.write('photo6SRC', imageData);
+	document.getElementById("image6").src = "data:image/jpeg;base64," + imageData;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+	console.log(imageURI);
+	var galleryImage = document.getElementById('image');
+	galleryImage.style.display = 'block';
+	galleryImage.src = imageURI;
+}
+
+function capturePhoto1() {
+	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
+	quality: 50,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+
+function capturePhoto2() {
+	navigator.camera.getPicture(onPhotoDataSuccess2, onFail, {
+	quality: 50,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+function capturePhoto3() {
+	navigator.camera.getPicture(onPhotoDataSuccess3, onFail, {
+	quality: 50,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+function capturePhoto4() {
+	navigator.camera.getPicture(onPhotoDataSuccess4, onFail, {
+	quality: 50,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+function capturePhoto5() {
+	navigator.camera.getPicture(onPhotoDataSuccess5, onFail, {
+	quality: 50,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+function capturePhoto6() {
+	navigator.camera.getPicture(onPhotoDataSuccess6, onFail, {
+	quality: 50,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+function getPhoto(source) {
+// Retrieve image file location from specified source
+	navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+	quality: 49,
+	targetWidth: 600,
+	targetHeight: 600,
+	destinationType: destinationType.FILE_URI,
+	sourceType: source,
+	correctOrientation: true
+	});
+}
+
+function onFail(message) {
+//alert('Failed because: ' + message);
+}
+
+
+
+
+
+</script>
+
+
+
+
+<div class="homeContent">
+
+<div class="pageBanner">Step 4: My Unit Photos</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="step3">
+
+<div class="boxer">
+	<div class="box-row">
+		<div class="box"><img id="image1" src="" style="width:30%;" onclick="capturePhoto1();"><br><button class="btn btn-warning" style="width:85%;" onclick="capturePhoto1();">Exterior 1</button></div>
+		<div class="box"><img id="image2" src="" style="width:30%;" onclick="capturePhoto2();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto2();">Exterior 2</button></div>
+		<div class="box"><img id="image3" src="" style="width:30%;" onclick="capturePhoto3();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto3();">Exterior 3</button></div>
+	</div>
+	<div class="box-row">
+		<div class="box"><img id="image4" src="" style="width:30%;" onclick="capturePhoto4();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto4();">Exterior 4</button></div>
+		<div class="box"><img id="image5" src="" style="width:30%;" onclick="capturePhoto5();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto5();">Interior 1</button></div>
+		<div class="box"><img id="image6" src="" style="width:30%;" onclick="capturePhoto6();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto6();">Interior 2</button></div>
+	</div>
+</div>
+
+
+
+
+
+    <button class="btn btn-success active" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">Finish</button>
+
+  </div>
+</form>
+
+
+</div>
+
+</div>
