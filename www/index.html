@@ -6,12 +6,12 @@
     <script>
     var store = Rhaboo.persistent('config');
 
-	if(store.introSkip == 'yes2'){
+	if(store.introSkip == 'yes'){
 	}
 	else
 	{
 	 //They will  see the intro so lets set the flag now
-	 store.write('introSkip', 'yes3');
+	 store.write('introSkip', 'yes');
 	 window.location.href = 'intro.html'
 	};
 
