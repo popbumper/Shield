@@ -15,6 +15,7 @@ if(store.photo1SRC != undefined){
 }
 else{
 	document.getElementById("image1").src = tempimage;
+	document.getElementById("image1big").src = tempimage;
 }
 
 if(store.photo2SRC != undefined){
@@ -179,12 +180,18 @@ function getPhoto(source) {
 // Retrieve image file location from specified source
 	navigator.camera.getPicture(onPhotoURISuccess, onFail, {
 	quality: 49,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
+	targetWidth: 400,
+	targetHeight: 400,
+	destinationType: destinationType.DATA_URL,
 	sourceType: source,
 	correctOrientation: true
 	});
+}
+
+function showPhoto() {
+//document.image1big.visibility.visable:
+document.getElementById("image1big").visibility = "visable";
+
 }
 
 function onFail(message) {
@@ -220,7 +227,8 @@ function onFail(message) {
 		<div class="box"><img id="image6" src="" style="width:30%;" onclick="capturePhoto6();"><br><button class="btn btn-orange active"  style="width:85%;" onclick="capturePhoto6();">Interior 2</button></div>
 	</div>
 <br>
-	<button class="btn btn-orange active"  style="width:85%;" onclick="getPhoto(store.photo1SRC)">TEST</button>
+<div class="box"><img id="image1big" src="" style="width:60%; visibility:hidden" >
+	<button class="btn btn-orange active"  style="width:85%;" onclick="showPhoto()">TEST</button>
 </div>
 
 
