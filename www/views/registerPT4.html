@@ -12,6 +12,7 @@ var tempimage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqa
 
 if(store.photo1SRC != undefined){
     document.getElementById("image1").src = "data:image/jpeg;base64," + store.photo1SRC;
+    document.getElementById("image1big").src = "data:image/jpeg;base64," + store.photo1SRC;
 }
 else{
 	document.getElementById("image1").src = tempimage;
