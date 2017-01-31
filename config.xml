@@ -29,7 +29,7 @@
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard" source="npm"/>
 	<gap:plugin name="com.cordova.plugins.sms" source="npm"  />
-	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" source="npm"/>
 	
 	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 	
