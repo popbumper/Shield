@@ -17,6 +17,7 @@
         Snoop the dog 
     </author>
     
+<preference name='phonegap-version' value='cli-6.3.0' />
 
 	<gap:plugin name="org.apache.cordova.device" source="npm"/>	
 	<gap:plugin name="org.apache.cordova.statusbar" source="npm"/>
@@ -31,7 +32,7 @@
 	
 	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 
-	<preference name='phonegap-version' value='cli-6.3.0' />
+	
 	
 	<preference name="target-device"    value="universal" />
 	<preference name="fullscreen"       value="false" />
