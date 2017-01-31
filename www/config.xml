@@ -22,15 +22,16 @@
 	<gap:plugin name="org.apache.cordova.device" source="npm"/>	
 	<gap:plugin name="org.apache.cordova.statusbar" source="npm"/>
 	<gap:plugin name="org.apache.cordova.inappbrowser" source="npm"/>
-	<gap:plugin name="cordova-plugin-camera" version="1.2.0" source="npm"/>
+	<gap:plugin name="cordova-plugin-camera"  source="npm"/>
 	<gap:plugin name="phonegap-plugin-barcodescanner-ps" source="npm"/>    
-	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
+	<gap:plugin name="cordova-plugin-email-composer" version="0.8.3" source="npm"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-	<gap:plugin name="com.ionic.keyboard" source="npm"/>
-	<gap:plugin name="com.cordova.plugins.sms" source="npm"  />
-	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="cordova-plugin-ionic-keyboard" source="npm"/>
+	<gap:plugin name="cordova-plugin-sms" source="npm"  />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" source="npm"/>
 	
 	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
+	
 
 	
 	
