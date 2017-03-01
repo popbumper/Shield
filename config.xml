@@ -18,7 +18,7 @@
     </author>
     
 
-	<preference name='phonegap-version' value='cli-6.3.0' />
+	<preference name='phonegap-version' value='cli-6.5.0' />
 
 	<gap:plugin name="org.apache.cordova.device" source="npm"/>	
 	<gap:plugin name="org.apache.cordova.statusbar" source="npm"/>
