@@ -35,9 +35,13 @@ clubCare.config(['$routeProvider',
       when('/repairer', {
         templateUrl: 'views/repairer.html'
       }).
-      when('/hints', {
-        templateUrl: 'views/hints.html'
+      when('/caravenselector', {
+        templateUrl: 'views/caravan_selector.html'
       }).
+	  
+	   when('/info', {
+        templateUrl: 'views/information_centre.html'
+      }).  
 
        when('/winter', {
         templateUrl: 'views/winter.html'
