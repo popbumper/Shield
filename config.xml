@@ -57,7 +57,7 @@
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
 	
-	
+<allow-navigation href="*" />
   <access origin="http://www.shieldtotalinsurance.co.uk" subdomains="true" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->

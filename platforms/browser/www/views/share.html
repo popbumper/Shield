@@ -1,0 +1,81 @@
+<script>
+  ga_storage._setAccount('UA-71012021-2'); //Replace with your own
+  ga_storage._trackPageview('/share.html');
+</script>
+<script>
+
+function getPlatform(){
+	var platform = '' + device.platform;
+
+	switch(platform){
+		case 'Android':
+		var message = "Check out the Shield Total Insurance app for all your policy needs: URL TBC";
+		break;
+
+		case 'iOS':
+		var message = "Check out the Shield Total Insurance app for all your policy needs: URL TBC";
+		break;
+	}
+	return message;
+}
+
+
+function shareTwitter(){
+	var message = getPlatform();
+	//alert(message);
+	window.plugins.socialsharing.share(message);
+
+}
+
+
+ function sendSms() {
+        var number = document.getElementById('numberTxt').value;
+        //var message = document.getElementById('messageTxt').value;
+        //alert(number);
+
+
+        var message = getPlatform();
+        //alert(message);
+
+ 		//CONFIGURATION
+        var options = {
+            replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            android: {
+                intent: 'INTENT'  // send SMS with the native android SMS messaging
+                //intent: '' // send SMS without open any other app
+
+            }
+        };
+
+        var success = function () { alert('Message sent successfully'); };
+        var error = function (e) { alert('Message Failed:' + e); };
+        sms.send(number, message, options, success, error);
+    }
+</script>
+
+
+
+<div class="homeContent2">
+<div class="pageBanner">Share the app</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+
+
+<input class="feedback-input" id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+<br>
+<center>
+	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Share by SMS</button><br>
+		<button class="btn btn-success" onclick="shareTwitter()">Share on Twitter or Facebook</button>
+
+</center>
+
+
+</div>
+
+</div>
+
+
+<div class="share">
+	<img src="img/share.png" style="width:100%">
+</div>

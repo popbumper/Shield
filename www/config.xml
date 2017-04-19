@@ -96,7 +96,7 @@
 
 
 
-
+ <allow-navigation href="*" />
 <access origin="*" />
 
 
