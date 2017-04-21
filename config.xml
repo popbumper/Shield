@@ -57,7 +57,7 @@
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
 	
-  <access origin="*" />
+<access origin='*' allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true' />
  
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
