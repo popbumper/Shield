@@ -21,7 +21,7 @@
     <preference name="android-minSdkVersion" value="" />
     <icon src="icon.png" />
     <icon gap:density="xhdpi" gap:platform="android" src="icon.png" />
-    <access origin="*" />
+    <access allows-arbitrary-loads-in-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
