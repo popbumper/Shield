@@ -21,8 +21,7 @@
     <preference name="android-minSdkVersion" value="" />
     <icon src="icon.png" />
     <icon gap:density="xhdpi" gap:platform="android" src="icon.png" />
-    <allow-navigation href="*" />
-    <access origin="http://www.shieldtotalinsurance.co.uk" subdomains="true" />
+    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

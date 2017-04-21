@@ -97,7 +97,7 @@
 
 
 
-<access origin="*" />
+  <access origin="*" allows-arbitrary-loads-in-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" />
 
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
@@ -109,6 +109,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+	<allow-intent href="*" />
+    <allow-navigation href="*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
