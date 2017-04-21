@@ -13,7 +13,7 @@
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="phonegap-plugin-barcodescanner-ps" source="npm" />
     <gap:plugin name="cordova-plugin-email-composer" source="npm" version="0.8.3" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-legacy-whitelist" source="npm" />
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-sms" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="npm" />
@@ -28,6 +28,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
