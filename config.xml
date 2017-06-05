@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "Shield Total Insurance"
         versionCode = "10" 
-        version     = "1.0.1" >
+        version     = "1.0.2" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -34,8 +34,12 @@
 	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 	
 	<gap:config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
-	<string>We are using the Camera for users to take pictures of there items to be stored on the phone and called back into the app for emailing out in the event of a claim</string>
+	<string>We are using the Camera for users to take pictures of their items to be stored on the phone and called back into the app for emailing out in the event of a claim</string>
 	</gap:config-file>
+	
+	  <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription" overwrite="true">
+    <string>We are using the Photo Library to store pictures of their items to be stored on the phone and called back into the app for emailing out in the event of a claim</string>
+  </gap:config-file>
 	
 	<preference name="orientation"      value="default" />
 	<preference name="target-device"    value="universal" />
